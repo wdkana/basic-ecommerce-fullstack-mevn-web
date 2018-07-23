@@ -29,7 +29,7 @@ res.status(200).json(
 
 // ambil semua data kue
 router.get('/pastry', function(req, res){
-    Pastry.find({}, function(err, pastry) {
+    Pastry.find({}, (err, pastry) => {
         var pastryMap = {}
         pastry.forEach(function(pastries) {
         pastryMap[pastries._id] = pastries
